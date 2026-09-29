@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #1a1917;
+  --paper: #f7f4ef;
+  --paper-2: #efeae2;
+  --muted: #6b6760;
+  --line: #ddd6cb;
+  --gold: #e2b714;
+}
+
+body {
+  color: var(--ink);
+  background: var(--paper);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-5 py-2.5 text-xs font-medium tracking-widest uppercase transition;
+  }
+  .btn-gold {
+    @apply bg-[#e2b714] text-[#1a1917] hover:bg-[#c9a20f];
+  }
+  .btn-ink {
+    @apply bg-[#1a1917] text-[#f7f4ef] hover:bg-[#2c2a27];
+  }
+  .btn-outline {
+    @apply border border-[#1a1917] text-[#1a1917] hover:bg-[#1a1917] hover:text-[#f7f4ef];
+  }
+  .input {
+    @apply w-full border-0 border-b border-[#ddd6cb] bg-transparent py-2.5 text-sm outline-none focus:border-[#e2b714];
+  }
+  .label {
+    @apply mb-1.5 block text-[0.65rem] font-medium uppercase tracking-widest text-[#6b6760];
+  }
+  .card {
+    @apply border border-[#ddd6cb] bg-[#f7f4ef] p-5;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "wemmypro-world",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wemmypro World static marketing site",
+  "scripts": {
+    "build": "node scripts/inject-env.js",
+    "dev": "node scripts/inject-env.js && python3 -m http.server 8080"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
